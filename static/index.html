@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Vehicle Traffic Priority</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Smart Traffic Management System</p>
+          <h1>Emergency Vehicle Priority</h1>
+        </div>
+        <button id="emergency-toggle" class="primary-btn">
+          Emergency Mode: OFF
+        </button>
+      </header>
+
+      <main class="dashboard">
+        <section class="map-panel card">
+          <div class="panel-header">
+            <h2>Live Route Map</h2>
+            <button id="refresh-route" class="secondary-btn">
+              Recalculate
+            </button>
+          </div>
+          <div id="map-surface" class="map-surface">
+            <svg
+              id="route-svg"
+              viewBox="0 0 760 420"
+              preserveAspectRatio="none"
+            ></svg>
+            <div id="vehicle-marker" class="map-marker vehicle-marker">
+              Ambulance
+            </div>
+            <div id="destination-marker" class="map-marker destination-marker">
+              Hospital
+            </div>
+          </div>
+        </section>
+
+        <aside class="side-panel">
+          <div class="card stats-card">
+            <h2>Emergency Vehicle</h2>
+            <div class="stat-row">
+              <span>Vehicle</span
+              ><strong id="vehicle-name">Ambulance 01</strong>
+            </div>
+            <div class="stat-row">
+              <span>Status</span><strong id="vehicle-status">STANDBY</strong>
+            </div>
+            <div class="stat-row">
+              <span>Location</span><strong id="vehicle-location">--</strong>
+            </div>
+            <div class="stat-row">
+              <span>Speed</span><strong id="vehicle-speed">0 km/h</strong>
+            </div>
+            <div class="stat-row">
+              <span>ETA</span><strong id="eta-value">--</strong>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Signal Priority</h2>
+            <div class="signal-grid">
+              <div class="signal-box north">
+                NORTH <span id="signal-north">RED</span>
+              </div>
+              <div class="signal-box south">
+                SOUTH <span id="signal-south">RED</span>
+              </div>
+              <div class="signal-box east">
+                EAST <span id="signal-east">RED</span>
+              </div>
+              <div class="signal-box west">
+                WEST <span id="signal-west">RED</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <section class="lower-grid">
+        <div class="card">
+          <h2>Route Details</h2>
+          <div class="route-summary">
+            <div>
+              <span>Current Route</span><strong id="route-name">--</strong>
+            </div>
+            <div>
+              <span>Distance</span><strong id="route-distance">--</strong>
+            </div>
+            <div>
+              <span>Traffic</span><strong id="route-traffic">--</strong>
+            </div>
+            <div><span>ETA</span><strong id="route-eta">--</strong></div>
+          </div>
+          <p id="route-recommendation" class="recommendation">
+            Select a destination to calculate the best route.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Upcoming Intersections</h2>
+          <ul id="intersection-list" class="intersection-list"></ul>
+        </div>
+
+        <div class="card">
+          <h2>Traffic AI</h2>
+          <div class="traffic-readout">
+            <div>
+              <span>Intersection</span
+              ><strong id="traffic-intersection">INT001</strong>
+            </div>
+            <div>
+              <span>Vehicle Count</span><strong id="traffic-count">--</strong>
+            </div>
+            <div>
+              <span>Density</span><strong id="traffic-density">--</strong>
+            </div>
+            <div>
+              <span>Model</span><strong id="traffic-source">best.onnx</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

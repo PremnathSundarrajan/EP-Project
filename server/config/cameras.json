@@ -1,0 +1,18 @@
+[
+  {
+    "id": "CAM_NORTH",
+    "name": "North Camera",
+    "direction": "NORTH",
+    "videoUrl": "http://10.245.55.176:8080/video",
+    "healthUrl": "http://10.245.55.176:8080/",
+    "snapshotUrl": "http://10.245.55.176:8080/shot.jpg"
+  },
+  {
+    "id": "CAM_SOUTH",
+    "name": "South Camera",
+    "direction": "SOUTH",
+    "videoUrl": "http://192.168.1.102:8080/video",
+    "healthUrl": "http://192.168.1.102:8080/",
+    "snapshotUrl": "http://192.168.1.102:8080/shot.jpg"
+  }
+]

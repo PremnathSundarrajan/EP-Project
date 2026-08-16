@@ -1,0 +1,7 @@
+fastapi==0.141.1
+uvicorn==0.52.2
+ultralytics
+opencv-python
+numpy==2.5.2
+python-dotenv==1.2.2
+pytest==9.1.1

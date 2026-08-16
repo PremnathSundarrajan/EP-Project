@@ -1,0 +1,26 @@
+[
+  {
+    "id": "INT001",
+    "name": "MG Road Junction",
+    "latitude": 12.9735,
+    "longitude": 77.6040,
+    "signals": ["NORTH", "SOUTH", "EAST", "WEST"],
+    "onRoutes": ["Route A", "Route B"]
+  },
+  {
+    "id": "INT002",
+    "name": "Hospital Signal",
+    "latitude": 12.9785,
+    "longitude": 77.6124,
+    "signals": ["NORTH", "SOUTH", "EAST", "WEST"],
+    "onRoutes": ["Route A", "Route B", "Route C"]
+  },
+  {
+    "id": "INT003",
+    "name": "City Center Junction",
+    "latitude": 12.9758,
+    "longitude": 77.6193,
+    "signals": ["NORTH", "SOUTH", "EAST", "WEST"],
+    "onRoutes": ["Route C"]
+  }
+]

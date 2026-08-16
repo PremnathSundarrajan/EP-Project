@@ -1,0 +1,28 @@
+{
+  "name": "smart-traffic-emergency-priority",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server/index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "@serialport/parser-readline": "^13.0.0",
+    "axios": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.19.2",
+    "mjpeg-decoder": "^1.0.3",
+    "onnxruntime-node": "^1.22.0",
+    "serialport": "^13.0.0",
+    "sharp": "^0.35.3",
+    "ws": "^8.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "cross-env": "^10.1.0"
+  }
+}

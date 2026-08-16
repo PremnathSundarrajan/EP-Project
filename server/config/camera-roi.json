@@ -1,0 +1,36 @@
+{
+  "frameWidth": 640,
+  "frameHeight": 640,
+  "zones": {
+    "NORTH": {
+      "x": 0,
+      "y": 0,
+      "width": 640,
+      "height": 213,
+      "label": "NORTH"
+    },
+    "SOUTH": {
+      "x": 0,
+      "y": 427,
+      "width": 640,
+      "height": 213,
+      "label": "SOUTH"
+    },
+    "EAST": {
+      "x": 427,
+      "y": 213,
+      "width": 213,
+      "height": 214,
+      "label": "EAST"
+    },
+    "WEST": {
+      "x": 0,
+      "y": 213,
+      "width": 213,
+      "height": 214,
+      "label": "WEST"
+    }
+  },
+  "confidenceThreshold": 0.25,
+  "iouThreshold": 0.45
+}
